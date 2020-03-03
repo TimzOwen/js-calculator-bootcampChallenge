@@ -76,3 +76,49 @@
  .empty {
      background-color: #919191;
  }
+ /**number styling to the cursor */
+ 
+ .number,
+ .operator {
+     cursor: pointer;
+ }
+ /**making the pointer more attractive by styling */
+ 
+ .operator:active,
+ .number:active {
+     /**when clicked by a cursor the pointer number becomes small */
+     font-size: 13px;
+ }
+ /**set the cursor circle to 0 */
+ 
+ .empty:focus,
+ .number:focus,
+ .operator:focus {
+     outline: 0;
+ }
+ /**for every 4th element change the background-color and size */
+ 
+ button:nth-child(4) {
+     font-size: 20px;
+     background-color: #20b2aa;
+ }
+ 
+ button:nth-child(8) {
+     font-size: 20px;
+     background-color: #ffa500;
+ }
+ 
+ button:nth-child(12) {
+     font-size: 20px;
+     background-color: #f08080;
+ }
+ 
+ button:nth-child(16) {
+     font-size: 20px;
+     background-color: #7d93e0;
+ }
+ 
+ button:nth-child(20) {
+     font-size: 20px;
+     background-color: #9477ef;
+ }
