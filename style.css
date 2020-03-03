@@ -14,4 +14,52 @@ body {
     width: 320px;
     height: 520px;
     background-color: #eaedef;
+    /**centerthecalculatorhorizontally*/
+    margin: 0 auto;
+    /**giveaspacingfromthetop*/
+    top: 20px;
+    position: relative;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#result {
+    /**give the heights for the result and keyboard inputs */
+    height: 120px;
+}
+
+#keyboard {
+    height: 400px;
+}
+
+#history {
+    /**align both text to the right and give it distinction from the rest of the output in color */
+    text-align: right;
+    height: 20px;
+    margin: 0 20px;
+    padding-top: 20px;
+    font-size: 15px;
+    color: #919191;
+}
+
+#output {
+    /**align the text to the right  and give the height and margin section to make them different from the rest*/
+    text-align: right;
+    height: 60px;
+    margin: 10px 20px;
+    font-size: 30px;
+}
+
+
+/**style the keyboard numbers and operators */
+
+.operator,
+.number,
+.empty {
+    width: 50px;
+    height: 50px;
 }
