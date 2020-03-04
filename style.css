@@ -72,8 +72,7 @@
      font-size: 15px;
  }
  
- .number,
- .empty {
+ .number {
      background-color: #919191;
  }
  /**number styling to the cursor */

@@ -31,12 +31,51 @@ function getFormattedNumber(num) {
 function reverseNumberFormat(num) {
     return Number(num.replace(/,/g, ''));
 }
-// alert(reverseNumberFormat(getOutPut()));
 
 //work on the operators
 var operator = document.getElementsByClassName("operator");
 for (var i = 0; i < operator.length; i++) {
     operator[i].addEventListener('click', function() {
-        alert("the operator clicked s " + this.id);
+        //set the cal to clear
+        if (this.id == "clear") {
+            printHistory("");
+            printOutput("");
+        } else if (this.id == "backspace") {
+            var output = reverseNumberFormat(getOutPut()).toString();
+            if (output) {
+                output = output.substr(0, output.length - 1);
+                printOutput(output);
+            }
+        } else {
+            var output = getOutPut();
+            var history = getHistory();
+            if (output != null) {
+                output = reverseNumberFormat(output);
+                history = history + output;
+                if (this.id == "=") {
+                    var result = eval(history);
+                    printOutput(result);
+                    printHistory("");
+                } else {
+                    history = history + this.id;
+                    printHistory(history);
+                    printOutput("");
+                }
+            }
+        }
+    });
+}
+//work on the Numbers onclick
+var number = document.getElementsByClassName("number");
+for (var i = 0; i < number.length; i++) {
+    number[i].addEventListener('click', function() {
+
+        //print  out the numbers to the screen
+        var output = reverseNumberFormat(getOutPut());
+        //check if it is a numbers
+        if (output != NaN) {
+            output += this.id;
+            printOutput(output);
+        }
     })
 }
