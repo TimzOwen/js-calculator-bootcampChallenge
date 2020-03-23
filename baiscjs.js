@@ -1,0 +1,1 @@
+// getting basic js knowldge
